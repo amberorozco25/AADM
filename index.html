@@ -89,6 +89,9 @@
                 },
                 mouseover: highlightFeature,
             });
+              hoverPoint = new L.Point(150,200);
+  hoverContent = "<p>Hello World!</p>";
+  control = new L.Control.Hover(hoverPoint, hoverContent, options)
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>Business Name</strong><br />' + (feature.properties['Business'] !== null ? autolinker.link(feature.properties['Business'].toLocaleString()) : '') + '</td>\
